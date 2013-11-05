@@ -23,7 +23,7 @@
 	},
 	"rsyslog": {
 		"server_ip": "logs.papertrailapp.com",
-		"port": "4061",
+		"port": "40641",
 		"protocol": "udp"
 	},
 	"java": {
