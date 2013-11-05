@@ -1,1 +1,39 @@
-{"run_list":[]}
+{
+	"minecraft": {
+		"dir": "/home/minecraft/",
+		"server_port": "25565",
+		"server_IP": "0.0.0.0",
+		"min_mem": "1024",
+		"max_mem": "2048",
+		"max_players": "10",
+		"motd": "rawrgle rawrgle",
+		"ops": "egray2",
+		"main_world": "wrackspace",
+		"pvp": "true",
+		"allow_flight": "true",
+		"bukkit": {
+			"use_bukkit": "true",
+			"default_plugins": [
+				"lockette"
+			]
+		}
+	},
+	"murmur": {
+		"superuser_password": "kewlpassword"
+	},
+	"rsyslog": {
+		"server_ip": "logs.papertrailapp.com",
+		"port": "4061",
+		"protocol": "udp"
+	},
+	"java": {
+		"oracle": {
+			"accept_oracle_download_terms": "true"
+		}
+	},
+	"run_list":[
+		"recipe[murmur]",
+		"recipe[minecraft-server::bukkit]",
+		"recipe[rsyslog::client]"
+	]
+}
