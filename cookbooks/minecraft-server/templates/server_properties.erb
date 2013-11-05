@@ -1,0 +1,45 @@
+###############################################################################
+# Minecraft server properties
+# Note: Managed by Chef - local changes will be overwritten.
+# See cookbooks/minecraft-server for more details and configuration files. 
+###############################################################################
+
+# Network settings
+server-ip=<%= node[:minecraft][:server_ip] %>
+server-port=<%= node[:minecraft][:server_port] %>
+
+# Server / Admin settings
+
+online-mode=<%= node[:minecraft][:online_mode] %>
+enable-rcon=<%= node[:minecraft][:rcon] %>
+white-list=<%= node[:minecraft][:white_list] %>
+snooper-enabled=<%= node[:minecraft][:snooper] %>
+enable-query=false
+max-players=<%= node[:minecraft][:max_players] %>
+motd=Brohan.net
+
+# World settings
+
+generator-settings=
+level-name=<%= node[:minecraft][:main_world] %>
+level-seed=<%= node[:minecraft][:level_seed] %>
+level-type=DEFAULT
+allow-nether=<%= node[:minecraft][:nether] %>
+allow-flight=<%= node[:minecraft][:allow_flight] %>
+
+# Game settings
+max-build-height=256
+view-distance=10
+texture-pack=
+
+# Difficulty
+gamemode=<%= node[:minecraft][:game_mode] %>
+difficulty=<%= node[:minecraft][:difficulty] %>
+pvp=<%= node[:minecraft][:pvp] %>
+hardcore=false
+
+# Spawn AI settings
+generate-structures=<%= node[:minecraft][:generate_structures] %>
+spawn-npcs=<%= node[:minecraft][:spawn_npcs] %>
+spawn-animals=<%= node[:minecraft][:spawn_animals] %>
+spawn-monsters=<%= node[:minecraft][:spawn_monsters] %>

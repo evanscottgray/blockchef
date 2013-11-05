@@ -1,0 +1,30 @@
+# Config File for IRCTransport
+# See the website for more information
+verbose: false
+suppress:
+  initial_userlist: false
+  initial_topic: false
+server:
+  address: <%= node[:minecraft][:bukkit][:irctransport][:irc_server] %>
+  port: <%= node[:minecraft][:bukkit][:irctransport][:irc_port] %>
+  ssl:
+    enabled: false
+    trust: false
+  nicksize: 16
+default:
+  prefix: 'mc|'
+  channels:
+  - channel: '#minecraft'
+messages:
+  chat-irc: '&9[&b${CHANNEL}&9] &3${NICK}: &f${MESSAGE}'
+  quit: '&3${NICK} &fleft'
+  private: '&2${NICK}&f to you: &f${MESSAGE}'
+  part: '&3${NICK} &fleft'
+  rename: '&3${OLDNICK} &fis now &3${NEWNICK}'
+  kick: '&3${NICK} &ckicked by &3${OP}: &${REASON}'
+  join: '&3${NICK} &fjoined &b${CHANNEL}'
+  list: 'On &9[&b${CHANNEL}&9]: &3${LIST}'
+  topic: '&9[&b${CHANNEL}&9] &3Topic: &f${TOPIC}'
+  action: '* &3${NICK} &a${ACTION}'
+translations:
+  hit the ground too hard: hit the ground

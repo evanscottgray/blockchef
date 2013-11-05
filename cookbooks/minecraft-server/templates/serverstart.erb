@@ -1,0 +1,3 @@
+#! /bin/bash
+CPU_COUNT=2
+screen -S minecraft -dm java -Xmx<%= node[:minecraft][:min_mem] %> -Xms<%= node[:minecraft][:max_mem] -XX:+UseConcMarkSweepGC -XX:+CMSIncrementalPacing -XX:ParallelGCThreads=$CPU_COUNT -XX:+AggressiveOpts  -jar /home/minecraft/craftbukkit.jar

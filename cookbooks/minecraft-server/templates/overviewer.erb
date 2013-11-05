@@ -1,0 +1,15 @@
+<% @worlds.each do |world| -%>
+worlds["<%= world['world'] %>"] = "<%= world['path'] %>"
+<% end -%>
+
+<% @worlds.each do |world| -%>
+renders["<%= world['id'] %>"] = {
+    "world": "<%= world['world'] %>",
+    "title": "<%= world['title'] %>",
+    "rendermode": "<%= world['rendermode'] %>",
+    "dimension": "<%= world['dimension'] %>",
+}
+<% end -%>
+
+outputdir = "<%= node['minecraft']['overviewer']['output_dir'] %>"
+texturepath = "<%= node['minecraft']['overviewer']['terrain_path'] %>"
