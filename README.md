@@ -1,7 +1,7 @@
 blockchef
 =========
 
-**craftmine...**__shamelessly stolen from like 5 other minecraft chef scripts on github...__
+**craftmine...**_shamelessly stolen from like 5 other minecraft chef scripts on github..._
 
 ## how2use ##
 1. have knife solo
